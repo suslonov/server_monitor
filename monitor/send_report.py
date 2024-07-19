@@ -12,7 +12,7 @@ import shutil
 import subprocess
 
 MAIL = '../parameters/mail.sec'
-PARAMETERS = "../parameters/ramses.sec"
+PARAMETERS = "../parameters/checks.sec"
 
 def send_mail(mail_parameters, date_now, server, my_msg, attachments):
    

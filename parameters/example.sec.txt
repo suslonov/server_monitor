@@ -34,7 +34,7 @@
 			"hour": 0,
 			"message": "check"
 		}
-	}
+	},
 
 	"binnun": {
 		"drive backup": {
