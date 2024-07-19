@@ -55,7 +55,7 @@ def monthly_check(parameters, date_now):
     return (date_now.day == 0) and (date_now.hour == 0 or not "hour" in parameters) and (date_now.minute == 0 or not "minute" in parameters)
 
 def raid_check(parameters):
-    result = subprocess.run(["bash"] + parameters["shell"].split(), stdout=subprocess.PIPE)
+    result = subprocess.run(parameters["shell"].split(), stdout=subprocess.PIPE)
 
     if result.stdout.lower().find(b"disabled") >= 0:
         return True

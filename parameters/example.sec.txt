@@ -45,7 +45,7 @@
 		},
 		"raid": {
 			"check": "raid",
-			"shell": "hptraidconf -u RAID -p hpt query devices",
+			"shell": "hptraidconf -u RAID -p hpt query arrays",
 			"message": "not healthy"
 		}
 	}
