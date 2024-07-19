@@ -1,0 +1,53 @@
+{
+	"ramses": {
+		"cvi": {
+			"check": "sql",
+			"host": "127.0.0.1",
+			"user": "",
+			"passwd": "",
+			"database": "",
+			"sql": "SELECT * FROM cvix_minutes_v004 WHERE minute_point >= DATE_ADD(NOW(), INTERVAL -10 minute)",
+			"message": "not healthy",
+			"limit": 8
+		},
+		"drive root": {
+			"check": "space",
+			"path": "/",
+			"message": "not enough space",
+			"limit": 1
+		},
+		"drive data": {
+			"check": "space",
+			"path": "/media/data",
+			"message": "not enough space",
+			"limit": 10
+		},
+		"drive boot": {
+			"check": "space",
+			"path": "/boot",
+			"message": "not enough space",
+			"limit": 0.05
+		},
+		"monthly": {
+			"check": "monthly",
+			"minute": 0,
+			"hour": 0,
+			"message": "check"
+		}
+	}
+
+	"binnun": {
+		"drive backup": {
+			"check": "space",
+			"path": "/media/BackUp",
+			"message": "not enough space",
+			"limit": 100
+		},
+		"raid": {
+			"check": "raid",
+			"shell": "hptraidconf -u RAID -p hpt query devices",
+			"message": "not healthy"
+		}
+	}
+}
+
